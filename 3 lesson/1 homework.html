@@ -1,0 +1,45 @@
+
+<meta charset="utf-8">
+<script type="text/javascript">
+var start = [];
+var end = 1;
+    while (end < 100){ // задаем числа до 100
+        end++;
+        start.push(end);
+        }
+        var a = 2;// убираем все цифры которые деляться на 2
+        var b = 2;
+        while (a <= 100){
+            a += b;
+                start.splice(start.indexOf(a), 1);
+        }
+        a = 4;// убираем все числа которые деляться на 3
+        b = 3;
+        while (a < 100){
+            if (a % b ===0 && start.indexOf(a) !== -1){
+                start.splice(start.indexOf(a), 1);
+            }else {
+                a++;
+            }
+        }
+        a = 6;// убираем числа которые деляться на 5
+        b = 5;
+        while (a < 100){
+            if (a % b ===0 && start.indexOf(a) !== -1){
+                start.splice(start.indexOf(a), 1);
+            }else {
+                a++;
+            }
+        }
+        a = 8;// убираем числа которые деляться на 7
+        b = 7;
+        while (a < 100){
+            if (a % b ===0 && start.indexOf(a) !== -1){
+                start.splice(start.indexOf(a), 1);
+            }else {
+                a++;
+            }
+        }
+    console.log(start);
+    document.write(start + "<br />");
+</script>
