@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+
+    <script type="text/javascript">
+        "use strict";
+        function CutNumber(Number) {
+
+            this.init = function(Num) {
+                if( 0 < parseInt(Num) && parseInt(Num)< 1000) {
+                    this.сотни = parseInt(Num/100);
+                    this.десятки = parseInt((Num - this.сотни*100)/10);
+                    this.единицы = parseInt(Num-this.десятки*10 - this.сотни*100);
+                } else {
+                    if(typeof(this.единицы) != "undefined") {
+                        delete this.сотни;
+                        delete this.десятки;
+                        delete this.единицы;
+                    }
+                }
+            }
+
+            this.init(Number);
+        }
+        var testNum = new CutNumber(999);
+        console.log(testNum);
+        var testNum1 = new CutNumber(56);
+        console.log(testNum1);
+        var testNum3 = new CutNumber(9);
+        console.log(testNum3);
+    </script>
+</head>
+
+<body> </body>
+
+</html>
