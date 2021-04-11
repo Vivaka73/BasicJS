@@ -7,16 +7,17 @@
 <body>
 <script type="text/javascript">
     "use strict";
-    let a = 10;
-    let b = -6;
-    if(a>0 && b>0){
-        let x = a - b;
+    let a = +prompt('Введите первое число');
+    let b = +prompt('Введите первое число');
+    let x;
+    if(a>=0 && b>=0){
+        x = a - b;
         alert(x);}
     else if(a<0 && b<0){
-        let x = a * b;
+        x = a * b;
         alert(x);}
-    else if(a<0 && b>0 || a>0 && b<0){
-        let x = a + b;
+    else {
+        x = a + b;
         alert(x);}
 </script>
 </body>
