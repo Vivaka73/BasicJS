@@ -1,0 +1,14 @@
+
+<meta charset="utf-8">
+<script type="text/javascript">
+var basket_price = 0;
+Basket = [{name:'bags', price:100}, {name:'denis', price:50},{name:'polos', price:25}];
+function countBasketPrice(x) {
+    for (i=0; i<Basket.length; i++) { 
+        basket_price = basket_price + Basket[i].price;
+    }
+    return basket_price;
+}
+for (i=0;i<Basket.length;i++)
+document.write('<b>Стоимость заказа: '+countBasketPrice(Basket)+'</b>');
+</script>
